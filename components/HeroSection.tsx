@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Shield } from "lucide-react"
 
@@ -13,7 +14,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00838F]/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-8 items-center pt-24 pb-16">
 
         {/* Left Side - Text Content */}
         <motion.div
@@ -21,34 +22,39 @@ export function HeroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center lg:text-left"
+          className="w-full"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance">
-            <span className="bg-gradient-to-r from-[#00838F] via-[#00ACC1] to-[#6C63FF] bg-clip-text text-transparent">
-              Regain Your Life
-            </span>
-            <br />
-            <span className="text-white">&amp; Time Back.</span>
-          </h1>
+          <div className="flex flex-col items-start text-left relative z-20">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance">
+              <span className="bg-gradient-to-r from-[#00838F] via-[#00ACC1] to-[#6C63FF] bg-clip-text text-transparent">
+                Regain Your Life
+              </span>
+              <br />
+              <span className="text-white">&amp; Time Back.</span>
+            </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 text-pretty">
-            Gamified focus. Social accountability. No restrictive force-blocking.
-            Build willpower through the ultimate Trust But Verify system.
-          </p>
+            <p className="mt-6 text-lg sm:text-xl text-slate-400 max-w-xl text-pretty">
+              Gamified focus. Social accountability. No restrictive force-blocking.
+              Build willpower through the ultimate Trust But Verify system.
+            </p>
 
-          <motion.a
-            href="https://play.google.com/store"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00838F] to-[#006064] rounded-full text-white font-semibold text-lg shadow-lg shadow-[#00838F]/30 hover:shadow-[#00838F]/50 transition-shadow"
-          >
-            <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-              <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" />
-            </svg>
-            Get it on Google Play
-          </motion.a>
+            <motion.a
+              href="https://play.google.com/store/apps/details?id=com.anirudhlabs.detoxly"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00838F] to-[#006064] rounded-full text-white font-semibold text-lg shadow-lg shadow-[#00838F]/30 hover:shadow-[#00838F]/50 transition-shadow"
+            >
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" />
+              </svg>
+              Get it on Google Play
+            </motion.a>
+            <p className="mt-3 text-sm text-slate-400 font-medium">
+              Start your first 15-minute detox session today.
+            </p>
+          </div>
         </motion.div>
 
         {/* Right Side - Backdrop banner + Phone mockup */}
@@ -57,66 +63,29 @@ export function HeroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center lg:justify-end"
+          className="w-full"
         >
-          {/*
-            Outer sizing container.
-            Mobile  (default): 340 × 680 — backdrop top-right, phone bottom-center, ~120px vertical overlap.
-            Desktop (md+)     : 680 × 580 — backdrop fills top-right ~70%, phone anchors bottom-left.
-          */}
-          <div className="relative w-[340px] h-[680px] md:w-[680px] md:h-[600px]">
+          {/* Right column stage */}
+          <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] max-w-2xl mx-auto mt-12 lg:mt-0">
 
-            {/* ── BACKDROP (top-right, large, slight tilt) ── */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
-              className="absolute top-0 right-0 rotate-2
-                w-[300px] h-[260px]
-                md:w-[500px] md:h-[360px]
-                rounded-2xl border border-white/10 shadow-2xl shadow-purple-500/20
-                bg-gradient-to-br from-[#6C63FF]/30 via-[#00838F]/20 to-slate-900/60
-                backdrop-blur-sm overflow-hidden"
-            >
-              {/* dot-grid texture */}
-              <div
-                className="absolute inset-0 opacity-50"
-                style={{
-                  backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)`,
-                  backgroundSize: "24px 24px",
-                }}
+            {/* ── BACKDROP (top-right, wide banner) ── */}
+            <div className="absolute top-0 right-0 w-[85%] md:w-[90%] z-0">
+              <Image
+                src="/feature-banner.png"
+                alt="Detoxly feature banner"
+                width={1024}
+                height={500}
+                priority
+                sizes="(min-width: 1280px) 750px, (min-width: 768px) 600px, 320px"
+                className="w-full h-auto rounded-xl shadow-2xl shadow-purple-500/20 rotate-3 origin-bottom-right object-cover"
               />
-              {/* Feature banner placeholder content */}
-              <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-8">
-                <div>
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest font-semibold mb-2">
-                    Feature Spotlight
-                  </p>
-                  <p className="text-white font-bold text-lg md:text-2xl text-balance leading-snug">
-                    Your Custom Feature<br />
-                    Banner Goes Here
-                  </p>
-                  <p className="text-white/50 text-xs md:text-sm mt-2 text-pretty max-w-[260px]">
-                    Replace this with a screenshot, stats card, or any feature callout — this area is fully visible.
-                  </p>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-[#00838F]" />
-                    <div className="w-2 h-2 rounded-full bg-[#6C63FF]" />
-                    <div className="w-2 h-2 rounded-full bg-white/20" />
-                  </div>
-                  <span className="text-white/30 text-[10px] font-medium">Detoxly</span>
-                </div>
-              </div>
-            </motion.div>
+            </div>
 
-            {/* ── PHONE (bottom-left, overlaps only the backdrop's bottom-left corner) ── */}
+            {/* ── PHONE (bottom-left, in foreground) ── */}
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="absolute z-10
-                bottom-0 left-1/2 -translate-x-1/2 scale-[0.82] origin-bottom
-                md:bottom-0 md:left-0 md:translate-x-0 md:scale-100"
+              className="absolute bottom-0 left-0 lg:-left-8 z-10 origin-bottom-left scale-[0.65] sm:scale-75 md:scale-90 lg:scale-100"
             >
               {/* Glow effect behind phone */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#00838F]/40 to-[#6C63FF]/40 blur-3xl scale-150 pointer-events-none" />

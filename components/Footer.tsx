@@ -13,6 +13,21 @@ export function Footer() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
+        {/* Final CTA */}
+        <div className="mb-10 text-center">
+          <h3 className="text-2xl font-bold text-white mb-6">
+            Your time is your life. Protect it.
+          </h3>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.anirudhlabs.detoxly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#00838F]/60 text-sm font-semibold text-slate-100 hover:bg-[#00838F]/10 transition-colors"
+          >
+            Download Detoxly
+          </a>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo and copyright */}
           <div className="flex items-center gap-3">
@@ -31,7 +46,9 @@ export function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6">
             <a 
-              href="/privacy"
+              href="https://sumptuous-cake-765.notion.site/Privacy-Policy-Detoxly-301a49f3d5cd803f8dd5cca7ec3d4ca0"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-slate-400 hover:text-white text-sm transition-colors"
             >
               Privacy Policy
