@@ -22,9 +22,9 @@ export function Footer() {
             href="https://play.google.com/store/apps/details?id=com.anirudhlabs.detoxly"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#00838F]/60 text-sm font-semibold text-slate-100 hover:bg-[#00838F]/10 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#00838F]/60 text-sm font-semibold text-slate-100 hover:bg-[#00838F]/10 transition-colors whitespace-nowrap"
           >
-            Download Detoxly
+            Download Detoxly on Google Play
           </a>
         </div>
 
@@ -32,7 +32,7 @@ export function Footer() {
           {/* Logo and copyright */}
           <div className="flex items-center gap-3">
             <Image 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PlayStoreAppIcon_ChatGPT-EMsjRpkUZNgQcevnl1MFT8bmVt6VPg.png"
+              src="/app-icon.png"
               alt="Detoxly Logo"
               width={40}
               height={40}

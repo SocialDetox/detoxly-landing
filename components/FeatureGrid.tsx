@@ -34,7 +34,7 @@ const features: Feature[] = [
 
 export function FeatureGrid() {
   return (
-    <section className="relative py-24 px-4">
+    <section className="relative py-20 md:py-24 px-4">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#00838F]/10 rounded-full blur-3xl" />

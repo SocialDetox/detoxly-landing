@@ -23,7 +23,7 @@ const metrics = [
 
 export function MetricsStrip() {
   return (
-    <section className="relative py-16 px-4">
+    <section className="relative py-14 md:py-16 px-4">
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#00838F]/5 via-transparent to-[#6C63FF]/5" />
       

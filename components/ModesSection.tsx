@@ -35,7 +35,7 @@ const modes: Mode[] = [
 
 export function ModesSection() {
   return (
-    <section className="relative py-24 px-4">
+    <section className="relative py-16 md:py-20 px-4">
       <div className="relative max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -6,6 +6,7 @@ import { VibeConnectTeaser } from "@/components/VibeConnectTeaser"
 import { Footer } from "@/components/Footer"
 import { StickyHeader } from "@/components/StickyHeader"
 import { InstallCTA } from "@/components/InstallCTA"
+import { FeatureBanner } from "@/components/FeatureBanner"
 
 export default function Home() {
   return (
@@ -24,7 +25,8 @@ export default function Home() {
         />
 
         {/* Content */}
-        <div className="relative z-10 pt-20">
+        <div className="relative z-10 pt-16 md:pt-20">
+          <FeatureBanner />
           <HeroSection />
           <MetricsStrip />
           <FeatureGrid />

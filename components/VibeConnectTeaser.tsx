@@ -5,7 +5,7 @@ import { Users, Sparkles, Heart } from "lucide-react"
 
 export function VibeConnectTeaser() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative py-20 md:py-24 px-4 overflow-hidden">
       {/* Deep purple background glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#6C63FF]/20 rounded-full blur-3xl" />
